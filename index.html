@@ -55,45 +55,20 @@
       display: inline-block;
       margin-top: 20px;
       transition: transform 0.3s ease, background-color 0.3s ease;
+      cursor: pointer;
     }
     .button:hover {
       background-color: #0056b3;
       transform: scale(1.1);
     }
 
-    /* Анимация для появления элементов */
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
-        transform: translateY(10px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* Анимация для кнопки */
-    @keyframes buttonAnimation {
-      0% {
-        opacity: 0;
-        transform: translateY(10px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  </style>
-</head>
-<body>
-
-<header>
-  <h1>HONOR X9C SMART</h1>
-  <p>Преимущества нового смартфона для вашего комфорта!</p>
-</header>
-
-<section>
-  <h2 style="animation: buttonAnimation 1s forwards;">Посмотреть характеристики</h2>
-  <a href="#specs" class="button">Перейти к характеристикам</a>
-</
+    /* Модальное окно */
+    .modal {
+      display: none; /* Скрыто по умолчанию */
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
